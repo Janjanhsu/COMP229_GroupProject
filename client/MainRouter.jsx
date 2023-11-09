@@ -8,6 +8,8 @@ import Profile from "./user/Profile.jsx";
 import PrivateRoute from "./lib/PrivateRoute.jsx";
 import EditProfile from "./user/EditProfile.jsx";
 import Menu from "./core/Menu";
+import AddItem from "./item/addItem";
+
 function MainRouter() {
   return (
     <div>
@@ -27,6 +29,7 @@ function MainRouter() {
           }
         />
         <Route path="/user/:userId" element={<Profile />} />
+        <Route path="/addItem" element={<AddItem />} />
       </Routes>
     </div>
   );
