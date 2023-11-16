@@ -8,7 +8,7 @@ import Profile from "./user/Profile.jsx";
 import PrivateRoute from "./lib/PrivateRoute.jsx";
 import EditProfile from "./user/EditProfile.jsx";
 import Menu from "./core/Menu";
-import AddItem from "./item/addItem.jsx";
+import AddItem from "./item/AddItem.jsx";
 
 function MainRouter() {
   return (
