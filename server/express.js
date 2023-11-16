@@ -14,6 +14,7 @@ const app = express();
 const CURRENT_WORKING_DIR = process.cwd();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("./server/dist/app"));
 app.use("/", userRoutes);
 app.use("/", authRoutes);
 app.use(bodyParser.json());
