@@ -1,15 +1,15 @@
 DUE DATE NOVEMBER 26TH (SATURDAY)
 
 Tips:
-git clone https://github.com/Janjanhsu/COMP229_GroupProject
-npm i
+1. git clone https://github.com/Janjanhsu/COMP229_GroupProject
+2. npm i
 
 Roles:
-Security Programmer - Glenn
-Front-End Developer - Yichen & Anastasiia
-Full-Stack - Ricardo
-Back-End Developer, Database Programmer - Bruno
-Technical Artist, Web Designer - Yza
+1. Security Programmer - Glenn
+2. Front-End Developer - Yichen & Anastasiia
+3. Full-Stack - Ricardo
+4. Back-End Developer, Database Programmer - Bruno
+5. Technical Artist, Web Designer - Yza
 
 Instructions:
 
