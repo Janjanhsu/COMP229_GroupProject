@@ -3,6 +3,7 @@ DUE DATE NOVEMBER 26TH (SATURDAY)
 Tips:
 1. git clone https://github.com/Janjanhsu/COMP229_GroupProject
 2. npm i
+3. npm install react-router-dom
 
 Roles:
 1. Security Programmer - Glenn
