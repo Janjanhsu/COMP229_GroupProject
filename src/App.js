@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from './assets/images/logo.jpg';
 import './App.css';
-import NavBar from './components/NavBar';
-import SignIn from './components/SignIn';
-import LogIn from './components/LogIn';
+import NavBar from './components/navBar/NavBar';
+import SignIn from './components/logIn/SignIn';
+import LogIn from './components/logIn/LogIn';
 import FlashcardQuiz from './components/FlashcardQuiz';
-import Ranking from './components/Ranking';
+import Ranking from './components/ranking/Ranking';
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
       </header>
 
       <Routes>
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/log-in" element={<LogIn />} />
+        <Route path="/logIn/SignIn" element={<SignIn />} />
+        <Route path="/logIn/LogIn" element={<LogIn />} />
         <Route path="/flashcard-quiz" element={<FlashcardQuiz />} />
-        <Route path="/ranking" element={<Ranking />} />
+        <Route path="/ranking/ranking" element={<Ranking />} />
         <Route path="/" element={
           <div className="App">
             <h1>Welcome to the Home Page</h1>
