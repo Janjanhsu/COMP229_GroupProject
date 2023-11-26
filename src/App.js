@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from './assets/images/logo.jpg';
-import './App.css';
+import './styles/App.css';
 import NavBar from './components/navBar/NavBar';
 import SignIn from './components/logIn/SignIn';
 import LogIn from './components/logIn/LogIn';
-import FlashcardQuiz from './components/FlashcardQuiz';
+import FlashcardQuiz from './components/flipcard/FlashcardQuiz';
 import Ranking from './components/ranking/Ranking';
 
 function App() {
