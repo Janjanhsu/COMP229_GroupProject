@@ -1,4 +1,4 @@
-DUE DATE NOVEMBER 26TH (SATURDAY)
+DUE DATE DECEMBER 2ND (SATURDAY)
 
 Tips:
 1. git clone https://github.com/Janjanhsu/COMP229_GroupProject
