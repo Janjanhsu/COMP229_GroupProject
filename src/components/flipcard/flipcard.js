@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ShowAnswer from './showAnswer.js';
 
 
 function Flipcard() {
@@ -24,9 +25,9 @@ function Flipcard() {
 
     return (
         <>
-            <div className="card-container">
+            <div className="App">
                 {questions.length > 0 ? (
-                    <div className="flip-card">
+                    <div className="card-container">
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <h3>Question {currentQuestionIndex + 1}</h3>
@@ -37,7 +38,7 @@ function Flipcard() {
                         </div>
                     </div>
                 ) : (
-                    <p>Loading...</p>
+                    <ShowAnswer correctTotal={numOfCorrectQuestions} />
                 )}
             </div>
         </>

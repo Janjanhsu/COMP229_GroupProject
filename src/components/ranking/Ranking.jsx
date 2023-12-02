@@ -14,7 +14,7 @@ const Ranking = () => {
   }, []);
 
   const fetchData = () => {
-    fetch('http://localhost:5000/api/data')
+    fetch('http://localhost:8081/api/data')
       .then(response => response.json())
       .then(result => setData(result))
       .catch(error => console.error('Error fetching data:', error));
