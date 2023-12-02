@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SignIn = () => {
+const SignUp = () => {
   return (
     <div>
-      <h1>Sign In</h1>
+      <h1>Sign Up</h1>
       <form>
         <label htmlFor="username">Username:</label>
         <input type="text" id="username" name="username" />
@@ -15,4 +15,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from './assets/images/logo.jpg';
 import './styles/App.css';
 import NavBar from './components/navBar/NavBar';
-import SignIn from './components/logIn/SignIn';
+import SignUp from './components/logIn/Register';
 import LogIn from './components/logIn/LogIn';
 import FlashcardQuiz from './components/flipcard/FlashcardQuiz';
 import Ranking from './components/ranking/Ranking';
@@ -19,7 +19,7 @@ function App() {
       </header>
 
       <Routes>
-        <Route path="/logIn/SignIn" element={<SignIn />} />
+        <Route path="/logIn/SignUp" element={<SignUp />} />
         <Route path="/logIn/LogIn" element={<LogIn />} />
         <Route path="/flashcard-quiz" element={<FlashcardQuiz />} />
         <Route path="/ranking/ranking" element={<Ranking />} />

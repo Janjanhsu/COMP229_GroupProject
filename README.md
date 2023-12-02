@@ -4,6 +4,7 @@ Tips:
 1. git clone https://github.com/Janjanhsu/COMP229_GroupProject
 2. npm i
 3. npm install react-router-dom
+4. npm i react-scripts@latest
 
 Roles:
 1. Security Programmer - Glenn
