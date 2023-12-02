@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+const PORT = 8081;
 const Ranking = () => {
 
   const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ const Ranking = () => {
   }, []);
 
   const fetchData = () => {
-    fetch('http://localhost:8081/api/data')
+    fetch(`http://localhost:${PORT}/api/data`)
       .then(response => response.json())
       .then(result => setData(result))
       .catch(error => console.error('Error fetching data:', error));
@@ -28,7 +29,7 @@ const Ranking = () => {
   };
 
   const handleAdd = () => {
-    fetch('http://localhost:5000/api/data', {
+    fetch(`http://localhost:${PORT}/api/data`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -50,7 +51,7 @@ const Ranking = () => {
   };
 
   const handleUpdate = () => {
-    fetch(`http://localhost:5000/api/data/${editingId}`, {
+    fetch(`http://localhost:${PORT}/api/data/${editingId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +68,7 @@ const Ranking = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/api/data/${id}`, {
+    fetch(`http://localhost:${PORT}/api/data/${id}`, {
       method: 'DELETE',
     })
       .then(() => {
