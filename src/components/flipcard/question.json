@@ -200,6 +200,60 @@
             "incorrect_answers": [
                 "False"
             ]
-        }
+        },
+        {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Geography",
+            "question": "Greenland is the largest island in the world.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Napoleon Bonaparte was taller than 6 feet.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Thor is the son of Odin in Norse mythology.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Music",
+            "question": "Mozart composed the opera 'The Magic Flute'.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "The Olympics were held in Tokyo in 2020.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          }
     ]
-}      
+} 
+          
+        
+        
+        
