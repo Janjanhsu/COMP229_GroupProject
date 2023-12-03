@@ -7,6 +7,25 @@
   font-family: Arial, sans-serif;
   margin-top: 50px;
 }
+
+.ranking-app{
+  width: 50%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin: auto;
+
+}
+.flip-card-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
 .card-container {
   display: flex;
   width: 300px;
@@ -34,7 +53,9 @@
   color: #333;
 }
 
-button {
+.flip-card-botton,
+.ranking-button {
+  width: 30%;
   padding: 10px 20px;
   margin-top: 10px;
   margin-right: 10px;

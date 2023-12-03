@@ -4,7 +4,7 @@ import Flipcard from './flipcard';
 const FlashcardQuiz = () => {
   return (
     <div>
-      <h1 className='App'>Flashcard Quiz</h1>
+      <h1 className='flip-card-center'>Flashcard Quiz</h1>
       <Flipcard /> 
     </div>
   );

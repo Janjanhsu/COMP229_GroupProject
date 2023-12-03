@@ -78,7 +78,8 @@ const Ranking = () => {
   };
 
   return (
-    <div>
+    <div className="ranking-app">
+      <h2>Ranking</h2>
       <input
         type="text"
         placeholder="Name"
@@ -94,16 +95,16 @@ const Ranking = () => {
         onChange={handleInputChange}
       />
       {editingId ? (
-        <button onClick={handleUpdate}>Update</button>
+        <button className="ranking-button" onClick={handleUpdate}>Update</button>
       ) : (
-        <button onClick={handleAdd}>Add</button>
+        <button className="ranking-button" onClick={handleAdd}>Add</button>
       )}
       {data.map((item) => (
         <div key={item.id}>
-          <p>{item.name}</p>
-          <p>{item.score}</p>
-          <button onClick={() => handleEdit(item.id)}>Edit</button>
-          <button onClick={() => handleDelete(item.id)}>Delete</button>
+          <p>Name: {item.name}</p>
+          <p>Score: {item.score}</p>
+          <button className="ranking-button" onClick={() => handleEdit(item.id)}>Edit</button>
+          <button className="ranking-button" onClick={() => handleDelete(item.id)}>Delete</button>
         </div>
       ))}
     </div>
