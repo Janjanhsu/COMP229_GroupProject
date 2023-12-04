@@ -1,34 +1,49 @@
-// LogIn.jsx
-
 import React, { useState } from 'react';
-import '../../styles/LogIn.css'; 
+import '../../styles/LogIn.css';
 
 const LogIn = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
+  const login = async (credentials) => {
     try {
-      // Perform authentication logic here @Glenn (send data to your backend)
-      const response = await fetch('/api/login', {
+      const response = await fetch('/api/authenticate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify(credentials),
       });
 
       if (!response.ok) {
         throw new Error('Login failed');
       }
 
-      // Login successful, perform any necessary actions (e.g., redirect to dashboard)
+      const { token } = await response.json();
+      localStorage.setItem('token', token);
+      // Assuming you have a function to handle successful login and redirection
+      handleSuccessfulLogin();
     } catch (err) {
-      setError('Invalid username or password');
+      setError('Invalid email or password');
     }
+  };
+
+  const handleSuccessfulLogin = () => {
+    // Perform any necessary actions upon successful login
+    // For example, you can redirect to a dashboard page
+    window.location.href = '/dashboard';
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const credentials = {
+      email,
+      password,
+    };
+
+    login(credentials);
   };
 
   return (
@@ -37,13 +52,13 @@ const LogIn = () => {
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="email">Email:</label>
           <input
             type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>

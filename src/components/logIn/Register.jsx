@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/Register.css'; 
+import '../../styles/Register.css';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch(`/api/register`, {
+      const response = await fetch('http://localhost:3000/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,12 +25,35 @@ const Register = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Registration failed');
+        const responseBody = await response.text();
+        throw new Error(`Registration failed with status ${response.status}. Response: ${responseBody}`);
       }
 
-      // Registration successful, perform any necessary actions (e.g., redirect to login)
+      // Registration successful, now handle authentication
+      const authResponse = await fetch('http://localhost:3000/api/authenticate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!authResponse.ok) {
+        const authResponseBody = await authResponse.text();
+        throw new Error(`Authentication failed with status ${authResponse.status}. Response: ${authResponseBody}`);
+      }
+
+      const { token } = await authResponse.json();
+
+      // Store the token in localStorage or a secure storage solution
+      localStorage.setItem('token', token);
+
+      // Authentication and Registration successful, perform any necessary actions
+      // (e.g., redirect to a dashboard)
+      console.log('Registration and authentication successful!');
     } catch (err) {
-      setError('Registration failed');
+      console.error('Error during registration and authentication:', err);
+      setError('Registration and authentication failed');
     }
   };
 
