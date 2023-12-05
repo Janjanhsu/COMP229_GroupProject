@@ -2,10 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
-const expressJwt = require('express-jwt');
+//const expressJwt = require('express-jwt');
 
 const app = express();
-const port = 3000;
+const port = 8081;
 
 // Use CORS middleware
 app.use(cors({ origin: 'http://localhost:3000' }));
@@ -16,11 +16,11 @@ app.use(bodyParser.json());
 const secretKey = 'your-secret-key';
 
 // Middleware to check JWT on protected routes
-app.use(
-  expressJwt({ secret: secretKey, algorithms: ['HS256'] }).unless({
-    path: ['/api/authenticate', '/api/register'], // Add public routes that don't require authentication
-  })
-);
+//app.use(
+ // expressJwt({ secret: secretKey, algorithms: ['HS256'] }).unless({
+   // path: ['/api/authenticate', '/api/register'], // Add public routes that don't require authentication
+  //})
+//);
 
 let data = [
   { id: 1, name: 'John', score: 80 },
