@@ -31,6 +31,7 @@
     "helmet": "^7.0.0",
     "i": "^0.3.7",
     "lodash": "^4.17.21",
+    "mongodb": "^6.3.0",
     "mongoose": "^7.3.0",
     "react-router-dom": "^6.20.1",
     "react-scripts": "^3.0.1"
