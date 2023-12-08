@@ -10,7 +10,7 @@
     "@babel/preset-env": "^7.22.5",
     "babel-loader": "^9.1.2",
     "concurrently": "^8.2.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.0.2"
   },
   "scripts": {
     "dev": "concurrently 'vite' \"nodemon server.js\"",
@@ -29,7 +29,10 @@
     "express-jwt": "^8.4.1",
     "global": "^4.4.0",
     "helmet": "^7.0.0",
+    "i": "^0.3.7",
     "lodash": "^4.17.21",
-    "mongoose": "^7.3.0"
+    "mongoose": "^7.3.0",
+    "react-router-dom": "^6.20.1",
+    "react-scripts": "^3.0.1"
   }
 }
