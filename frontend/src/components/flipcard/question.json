@@ -1,0 +1,259 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "Kangaroos keep food in their pouches next to their children.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "Rabbits are rodents.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "Cats have whiskers under their legs.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "A caterpillar has more muscles than humans do.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "The internet browser Firefox is named after the Red Panda.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "The Killer Whale is considered a type of dolphin.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "The freshwater amphibian, the Axolotl, can regrow it&#039;s limbs.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "A bear does NOT defecate during hibernation. ",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "The Axolotl is an amphibian that can spend its whole life in a larval state.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "Rabbits are carnivores.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "Cheetahs are the fastest land animal.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Science: Computers",
+            "question": "The Python programming language gets its name from the reptile species.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+                ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "The Great Wall of China is visible from space with the naked eye.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Science & Nature",
+            "question": "Astronauts experience a phenomenon known as time dilation.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "Tom Hanks starred in the movie 'Forrest Gump'.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Science: Computers",
+            "question": "Artificial Intelligence can analyze data faster than human beings.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "The Pyramids of Giza were built to last at least 5,000 years.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Science & Nature",
+            "question": "A comet's nucleus consists of frozen water and dust.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Minecraft was originally created by a Finnish game designer named Markus 'Notch' Persson.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Sports",
+            "question": "Michael Phelps holds the record for the most gold medals won in a single Olympic Games.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Geography",
+            "question": "Greenland is the largest island in the world.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Napoleon Bonaparte was taller than 6 feet.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Thor is the son of Odin in Norse mythology.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Music",
+            "question": "Mozart composed the opera 'The Magic Flute'.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+              "False"
+            ]
+          },
+          {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "The Olympics were held in Tokyo in 2020.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+              "True"
+            ]
+          }
+    ]
+} 
+          
+        
+        
+        
