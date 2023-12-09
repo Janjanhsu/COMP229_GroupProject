@@ -1,7 +1,8 @@
 import config from './config/config.js'
 import app from './server/express.js'
-import mongoose from 'mongoose'
-mongoose.Promise = globalThis.Promise
+import mongoose from 'mongoose';
+
+mongoose.Promise = global.Promise
 mongoose.connect(config.mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true

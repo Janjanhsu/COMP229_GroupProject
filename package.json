@@ -6,8 +6,9 @@
   "author": "Blessing",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
+    "@babel/core": "^7.23.5",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.5",
     "babel-loader": "^9.1.2",
     "concurrently": "^8.2.0",
     "nodemon": "^3.0.2"
