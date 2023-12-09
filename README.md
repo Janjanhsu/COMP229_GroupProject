@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dec-09 Jane's Documentation: 
+1. combined the same functions with the mern skeleton, like register, sign in and navigation.
+2. deleted register.jsx and login.jsx since using signup.jsx and signnin.jsx from mern skeleton.
+3. deleted register.css and login.css since using material UI.
+4. combined navbar components to Menu.jsx, Home.jsx and MainRouter.jsx.
+5. put user folder into components.
