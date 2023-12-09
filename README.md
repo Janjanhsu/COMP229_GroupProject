@@ -1,10 +1,15 @@
-DUE DATE DECEMBER 2ND (SATURDAY)
+PLEASE USE FULLSTACK3.0 FOR FINAL PROJECT
 
 Tips:
-1. git clone https://github.com/Janjanhsu/COMP229_GroupProject
+1. git clone -b fullstack3.0 --single-branch https://github.com/Janjanhsu/COMP229_GroupProject.git  or git pull (if it's downloaded before)
 2. npm i
-3. npm install react-router-dom
-4. npm i react-scripts@latest
+3. cd client
+4. npm i
+5. cd ..
+6. npm install react-router-dom
+7. npm i react-scripts@latest
+8. npm run build / cd client yarn build <- I only can use this one)
+9. nodemon server
 
 Roles:
 1. Security Programmer - Glenn
@@ -13,15 +18,3 @@ Roles:
 4. Back-End Developer, Database Programmer - Bruno
 5. Technical Artist, Web Designer - Yza
 
-Instructions:
-
-1. Requirments:
-   a. Landing Page
-   b. Perform CRUD:
-     create: start a game
-     Read: read the quiz
-     Update: answer true/false && Ranking system
-     Delete: stop/end the game
-3. In the Flipcard.js there is a variable called "numOfCorrectQuestions" to store the number of questions that users answer correctly,
-   please save this to the user profile and database.
-4. ...
