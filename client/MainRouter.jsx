@@ -1,14 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./core/Home";
-import Users from "./user/Users.jsx";
-import Signup from "./user/Signup.jsx";
+import Users from "./src/components/user/Users.jsx";
+import Signup from "./src/components/user/Signup.jsx";
 import Signin from "./lib/Signin.jsx";
-import Profile from "./user/Profile.jsx";
+import Profile from "./src/components/user/Profile.jsx";
 import PrivateRoute from "./lib/PrivateRoute.jsx";
-import EditProfile from "./user/EditProfile.jsx";
+import EditProfile from "./src/components/user/EditProfile.jsx";
 import Menu from "./core/Menu";
 import AddItem from "./item/AddItem.jsx";
+import FlashcardQuiz from './src/components/flipcard/FlashcardQuiz.jsx';
+import Ranking from './src/components/ranking/Ranking.jsx';
+
 
 function MainRouter() {
   return (
@@ -30,6 +33,8 @@ function MainRouter() {
         />
         <Route path="/user/:userId" element={<Profile />} />
         <Route path="/addItem" element={<AddItem />} />
+        <Route path="/flashcard-quiz" element={<FlashcardQuiz />} />
+        <Route path="/ranking" element={<Ranking />} />
       </Routes>
     </div>
   );

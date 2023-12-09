@@ -10,7 +10,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import auth from './auth-helper.js'
 import { Navigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
-import { signin } from './api-auth.js'
+import { signin } from './api-auth.js';
+import Login from '../src/assets/gif/Login.gif';
+
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -85,6 +87,7 @@ export default function Signin(props) {
   return (
     <Card className={classes.card}>
       <CardContent>
+      <img src={Login} className="Login" alt="Login" width="500" heigth="248"/>
         <Typography variant="h6" className={classes.title}>
           Sign In
         </Typography>

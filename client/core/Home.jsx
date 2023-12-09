@@ -1,36 +1,12 @@
-/*import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
-import Typography from '@material-ui/core/Typography'
-import unicornbikeImg from './../assets/images/unicornbike.jpg'
-
-const useStyles = makeStyles(theme => ({ 
-card: {
-maxWidth: 600, 
-margin: 'auto',
-marginTop: theme.spacing(5) 
-},
-title: {
-padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px 
-${theme.spacing(2)}px`,
-color: theme.palette.openTitle 
-},
-media: { 
-minHeight: 400
-} 
-}))*/
-
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import unicornbikeImg from './../assets/images/unicornbikeImg.jpg';
+import Welcome from '../src/assets/images/Welcome.png';
 import { Link } from 'react-router-dom';
-   
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -45,48 +21,30 @@ const useStyles = makeStyles(theme => ({
   media: {
     minHeight: 400,
   },
+  image: {
+    width: 864,
+    height: 432
+  },
+  button:{
+    padding: theme.spacing(1,1,1),
+    color: theme.palette.protectedTitle
+  }
 }));
 
-export default function Home(){ 
-const classes = useStyles()
-return (
-<Card className={classes.card}>
-   
-  <Typography variant="h6" className={classes.title}>Home Page</Typography>
-
-
-<CardMedia className={classes.media}
-image={unicornbikeImg} title="Unicorn Bicycle"/>
-<CardContent>
-<Typography variant="body2" component="p"> 
-Welcome to the MERN Skeleton home page.
-</Typography> 
-</CardContent>
-</Card> 
-)
-}
-
-/*const MyComponent = () => {
-  const classes = useStyles();
-
+export default function Home() {
+  const classes = useStyles()
   return (
     <Card className={classes.card}>
+
+      <Typography variant="h6" className={classes.title}>Home Page</Typography>
+      <CardMedia className={classes.media}
+        image={Welcome} title="Flash Quiz" />
       <CardContent>
-        <Typography variant="h6" className={classes.title}>
-          Card Title
-        </Typography>
-        <CardMedia
-          className={classes.media}
-          image={unicornbikeImg}
-          title="Unicorn Bike"
-        />
         <Typography variant="body2" component="p">
-          Card content goes here.
+          Welcome to the TECHARTGIE home page.
         </Typography>
+        <Button><Link to="/flashcard-quiz">Go to FlashCard Quiz</Link></Button>
       </CardContent>
     </Card>
-  );
-};
-
-export default MyComponent;*/
-
+  )
+}

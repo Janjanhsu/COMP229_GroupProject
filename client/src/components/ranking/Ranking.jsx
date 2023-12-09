@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
+import Rank from '../../assets/gif/Ranking.gif';
 
 const PORT = 8081;
 const Ranking = () => {
@@ -79,7 +80,8 @@ const Ranking = () => {
   };
 
   return (
-    <div>
+    <div className="ranking-app">
+       <img src={Rank} className="Ranking" alt="Rank" width="500" heigth="248"/>
       <input
         type="text"
         placeholder="Name"
@@ -95,14 +97,14 @@ const Ranking = () => {
         onChange={handleInputChange}
       />
       {editingId ? (
-        <button onClick={handleUpdate}>Update</button>
+        <button className = "ranking-button" onClick={handleUpdate}>Update</button>
       ) : (
-        <button onClick={handleAdd}>Add</button>
+        <button className = "ranking-button" onClick={handleAdd}>Add</button>
       )}
       {data.map((item) => (
         <div key={item.id}>
-          <p>{item.name}</p>
-          <p>{item.score}</p>
+          <p>Name: {item.name}</p>
+          <p>Score: {item.score}</p>
           <button onClick={() => handleEdit(item.id)}>Edit</button>
           <button onClick={() => handleDelete(item.id)}>Delete</button>
         </div>
