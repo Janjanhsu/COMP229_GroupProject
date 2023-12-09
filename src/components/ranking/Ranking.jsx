@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Rank from '../../assets/gif/Ranking.gif';
 
 const PORT = 8081;
 const Ranking = () => {
@@ -79,7 +80,7 @@ const Ranking = () => {
 
   return (
     <div className="ranking-app">
-      <h2>Ranking</h2>
+      <img src={Rank} className="Ranking" alt="Rank" width="500" heigth="248"/>
       <input
         type="text"
         placeholder="Name"

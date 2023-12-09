@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ShowAnswer from './showAnswer.js';
+import Quiz from '../../assets/gif/Quiz.gif';
 
 
 function Flipcard() {
@@ -35,6 +36,7 @@ function Flipcard() {
                     <div className="card-container">
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
+                            <img src={Quiz} className="Quiz" alt="Quiz Time" width="500" heigth="248"/>
                                 <h3>Question {currentQuestionIndex + 1}</h3>
                                 <p dangerouslySetInnerHTML={{ __html: question }} />
                                 <button className="flip-card-botton" value="True" onClick={nextQuestion}>True</button>

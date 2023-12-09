@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Congrats from '../../assets/gif/Congrats.gif';
 
 const PORT = 8081;
 
@@ -35,7 +36,8 @@ function ShowAnswer(props) {
         <>
             {correctTotal > 0 ? (
                 <div>
-                    <p>Congrats! You got {correctTotal} correct!</p>
+                    <img src={Congrats} className="Congrats" alt="Congrats" width="500" heigth="248"/>
+                    <p><center>You got {correctTotal} correct!</center></p>
                     <input
                         type="text"
                         placeholder="Name"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from './assets/images/logo.jpg';
+import Welcome from './assets/images/Welcome.png';
 import './styles/App.css';
 import NavBar from './components/navBar/NavBar';
 import SignUp from './components/logIn/Register';
@@ -25,7 +26,7 @@ function App() {
         <Route path="/ranking/ranking" element={<Ranking />} />
         <Route path="/" element={
           <div className="App">
-            <h1>Welcome to the Home Page</h1>
+            <img src={Welcome} className="Welcome" alt="Welcome" width="864" height="432"/>
             <Link to="/flashcard-quiz" className="big-button">Go to FlashCard Quiz</Link>
           </div>
         } />

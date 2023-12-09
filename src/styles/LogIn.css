@@ -1,5 +1,5 @@
 .login-container {
-    width: 300px;
+    width: 500px;
     margin: 50px auto; 
     padding: 20px;
     border: 1px solid #ccc;
@@ -28,7 +28,7 @@
     width: 100%;
     border: none;
     border-radius: 3px;
-    background-color: #007bff;
+    background-color: #3d4650;
     color: white;
     cursor: pointer;
   }

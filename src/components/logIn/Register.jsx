@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/Register.css';
+import SignUp from '../../assets/gif/Register.gif';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -59,7 +60,7 @@ const Register = () => {
 
   return (
     <div className="register-container">
-      <h2>Register</h2>
+      <img src={SignUp} className="SignUp" alt="Register" width="500" heigth="248"/>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleRegister}>
         <div className="form-group">
