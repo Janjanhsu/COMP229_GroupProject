@@ -25,6 +25,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: "Password is required",
   },
+  quiz_scores:{
+    type: [Number],
+    default: [0],
+  },
   salt: String,
 });
 UserSchema.virtual("password")
@@ -66,5 +70,4 @@ UserSchema.methods = {
     return Math.round(new Date().valueOf() * Math.random()) + "";
   },
 };
-//module.exports = mongoose.model('User', UserSchema);
 export default mongoose.model("User", UserSchema);

@@ -33,7 +33,7 @@ function MainRouter() {
         />
         <Route path="/user/:userId" element={<Profile />} />
         <Route path="/addItem" element={<AddItem />} />
-        <Route path="/flashcard-quiz" element={<FlashcardQuiz />} />
+        <Route path="/user/:userId/flashcard-quiz" element={<FlashcardQuiz />} />
         <Route path="/ranking" element={<Ranking />} />
       </Routes>
     </div>

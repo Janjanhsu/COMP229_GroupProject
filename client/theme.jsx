@@ -3,7 +3,7 @@ import { pink } from '@material-ui/core/colors'
 const theme = createTheme({
     typography: {
         useNextVariants: true,
-        htmlFontSize: 10
+        htmlFontSize: 12
     },
     palette: {
         primary: {

@@ -23,7 +23,9 @@ import ArrowForward from "@material-ui/icons/ArrowForward";
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    // Define your card styles here
+    maxWidth: 600,
+    margin: 'auto',
+    marginTop: theme.spacing(5),
   },
   textField: {
     // Define your text field styles here

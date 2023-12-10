@@ -57,6 +57,24 @@ const update = async (params, credentials, user) => {
     console.log(err);
   }
 };
+
+const updateScore = async (params, credentials, user) => {
+  try {
+    let response = await fetch("/api/users/" + params.userId + "/flashcard-quiz", {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + credentials.t,
+      },
+      body: JSON.stringify(user),
+    });
+    return await response.json();
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const remove = async (params, credentials) => {
   try {
     let response = await fetch("/api/users/" + params.userId, {
@@ -72,4 +90,4 @@ const remove = async (params, credentials) => {
     console.log(err);
   }
 };
-export { create, list, read, update, remove };
+export { create, list, read, update, remove, updateScore  };

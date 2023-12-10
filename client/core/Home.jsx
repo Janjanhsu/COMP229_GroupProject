@@ -5,8 +5,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Welcome from '../src/assets/images/Welcome.png';
-import { Link } from 'react-router-dom';
-import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -35,7 +33,6 @@ export default function Home() {
   const classes = useStyles()
   return (
     <Card className={classes.card}>
-
       <Typography variant="h6" className={classes.title}>Home Page</Typography>
       <CardMedia className={classes.media}
         image={Welcome} title="Flash Quiz" />
@@ -43,7 +40,6 @@ export default function Home() {
         <Typography variant="body2" component="p">
           Welcome to the TECHARTGIE home page.
         </Typography>
-        <Button><Link to="/flashcard-quiz">Go to FlashCard Quiz</Link></Button>
       </CardContent>
     </Card>
   )

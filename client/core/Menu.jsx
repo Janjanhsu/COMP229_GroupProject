@@ -20,7 +20,7 @@ export default function Menu() {
   return (
     <AppBar position="static">
       <Toolbar>
-          <img src={logo} className="logo" alt="logo"/>
+        <img src={logo} className="logo" alt="logo" />
         <Typography variant="h6" color="inherit">
           TechArtgie
         </Typography>
@@ -49,15 +49,14 @@ export default function Menu() {
             <Link to={"/user/" + auth.isAuthenticated().user._id}>
               <Button style={isActive(location, "/user/" + auth.isAuthenticated().user._id)}>My Profile</Button>
             </Link>
+            <Link to={"/user/" + auth.isAuthenticated().user._id + "/flashcard-quiz"}>
+              <Button style={isActive(location, "/user/" + auth.isAuthenticated().user._id +"/flashcard-quiz")}>Start Quiz</Button>
+            </Link>
             <Button color="inherit" onClick={() => {
               auth.clearJWT(() => navigate('/'));
             }}>Sign out</Button>
           </span>)
         }
-        <Link to="/flashcard-quiz">
-          <Button style={isActive(location, "/flashcard-quiz")}>Start Quiz
-          </Button>
-        </Link>
         <Link to="/ranking">
           <Button style={isActive(location, "/ranking")}>Ranking
           </Button>

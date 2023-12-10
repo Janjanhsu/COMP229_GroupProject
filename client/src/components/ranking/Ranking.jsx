@@ -1,8 +1,92 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from 'react';
 import Rank from '../../assets/gif/Ranking.gif';
+import React from "react";
+import { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import List from "@material-ui/core/List";
+import { list } from "../user/api-user.js";
+import CardMedia from '@material-ui/core/CardMedia';
+import ListItem from "@material-ui/core/ListItem";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import ListItemText from "@material-ui/core/ListItemText";
 
-const PORT = 8081;
+const useStyles = makeStyles((theme) => ({
+  card: {
+    maxWidth: 600,
+    margin: 'auto',
+    marginTop: theme.spacing(5),
+  },
+  title: {
+    padding: theme.spacing(3, 2.5, 2),
+    color: theme.palette.openTitle,
+  },
+  media: {
+    minHeight: 400,
+  },
+  image: {
+    width: 500,
+    height: 248
+  },
+  button: {
+    padding: theme.spacing(1, 1, 1),
+    color: theme.palette.protectedTitle
+  }
+}))
+
+export default function Ranking() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+    list(signal).then((data) => {
+      if (data && data.error) {
+        console.log(data.error);
+      } else {
+        console.log(data);
+        setUsers(data);
+      }
+    });
+    return function cleanup() {
+      abortController.abort();
+    };
+  }, []);
+
+  const sortedUsersByScore = users.slice().sort((a, b) => {
+    // Assuming highest_score is an array of numbers
+    const maxScoreA = Math.max(...a.quiz_scores);
+    const maxScoreB = Math.max(...b.quiz_scores);
+    // Sorting in descending order of highest scores
+    return maxScoreB - maxScoreA;
+  });
+
+  const classes = useStyles();
+  return (
+    <Card className={classes.card}>
+      <CardMedia className={classes.media}
+        image={Rank} title="Ranking" />
+      <CardContent>
+        <List dense>
+          {sortedUsersByScore.map((item, i) => {
+            return (
+              <List key={i}>
+                <ListItem>
+                  <ListItemAvatar>
+                    <span>{i + 1}</span>
+                  </ListItemAvatar>
+                  <ListItemText primary={item.name} secondary={Math.max(...item.quiz_scores)} />
+                </ListItem>
+              </List>
+            );
+          })}
+        </List>
+      </CardContent>
+    </Card>
+  );
+}
+
+/*
 const Ranking = () => {
 
   const [data, setData] = useState([]);
@@ -114,3 +198,5 @@ const Ranking = () => {
 }
 
 export default Ranking;
+
+*/

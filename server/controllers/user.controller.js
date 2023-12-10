@@ -17,7 +17,7 @@ const create = async (req, res) => {
 };
 const list = async (req, res) => {
   try {
-    let users = await User.find().select("name email 	updated created");
+    let users = await User.find().select("name email quiz_scores");
     res.json(users);
   } catch (err) {
     return res.status(400).json({
@@ -61,6 +61,18 @@ const update = async (req, res) => {
     });
   }
 };
+const updateScore = async (req, res) => {
+  try {
+    let user = req.profile;
+    user.quiz_scores = [...quiz_scores, req.body];
+    await user.save();
+    res.json(user);
+  } catch (err) {
+    return res.status(400).json({
+      error: errorHandler.getErrorMessage(err),
+    });
+  }
+};
 const remove = async (req, res) => {
   try {
     let user = req.profile;
@@ -74,4 +86,4 @@ const remove = async (req, res) => {
     });
   }
 };
-export default { create, userByID, read, list, remove, update };
+export default { create, userByID, read, list, remove, update, updateScore };
