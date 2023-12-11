@@ -1,23 +1,29 @@
 import { useState, useEffect } from 'react';
 import Congrats from '../../assets/gif/Congrats.gif';
-import { update, updateScore } from "../user/api-user.js";
+//import { read} from "../user/api-user.js";
+import { Navigate } from "react-router-dom";
 import auth from "../../../lib/auth-helper.js";
 import { useParams } from "react-router-dom";
 
-function ShowAnswer(props) {
-    const [values, setValues] = useState({
-        updatedScores: [],
-        error: "",
-        redirectToProfile: false,
-    });
-    const { userId } = useParams();
-    const correctTotal = props.correctTotal;
-    const jwt = auth.isAuthenticated();
+const ShowAnswer = (props) => {
     /*
-    const handleAdd = (event) => {
+    const { userId } = useParams();
+    const [values, setValues] = useState({
+        quiz_scores: [],
+        redirectToProfile: false,
+        error: ""
+    });
+    */
+    const correctTotal = props.correctTotal;
+    //const jwt = auth.isAuthenticated();
+    /*
+    const handleAdd = () => {
+        
         const user = {
-            userId: userId
-        };
+            userId: userId,
+            quiz_scores: [correctTotal]
+        }
+        console.log(user);
         updateScore(
             {
                 userId: userId
@@ -27,33 +33,60 @@ function ShowAnswer(props) {
             },
             user
         ).then((data) => {
-            updatedScores = [...quiz_scores, correctTotal];
-            setValues({
-                ...values,
-                userId: data._id,
-                quiz_scores: updatedScores,
-                redirectToProfile: true 
-            });
-
+            if (data && data.error) {
+                setValues({ ...values, error: data.error });
+            } else {
+                setValues({
+                    quiz_scores: [correctTotal],
+                    redirectToProfile: true
+                })
+            }   
         });
-        */
-return (
-    <>
-        {correctTotal > 0 ? (
-            <div>
-                <img src={Congrats} className="Congrats" alt="Congrats" width="500" heigth="248" />
-                <p><center>You got {correctTotal} correct!</center></p>
-                
-            </div>
-        ) : (
-            <p>Ready to start?</p>
-        )
-        }
-    </>
-);
+            <Navigate to="/" />;
+    }
+    */
+    return (
+        <>
+            {correctTotal > 0 ? (
+                <div>
+                    <img src={Congrats} className="Congrats" alt="Congrats" width="500" heigth="248" />
+                    <p><center>You got {correctTotal} correct!</center></p>
+                    
+                </div>
+            ) : (
+                <p>Ready to start?</p>
+            )
+            }
+        </>
+    );
 }
 
 
 export default ShowAnswer;
 
-/* <button className="flip-card-botton" onClick={handleAdd}>Confirm</button> */
+
+/*
+<button className="flip-card-botton" onClick={<Navigate to="/" />}>Confirm</button>
+    
+    useEffect(() => {
+        const abortController = new AbortController();
+        const signal = abortController.signal;
+        read(
+          {
+            userId: userId,
+          },
+          { t: jwt.token },
+          signal
+        ).then((data) => {
+          if (data && data.error) {
+            setValues({ ...values, error: data.error });
+          } else {
+            setValues({ ...values, quiz_scores: data.quiz_scores});
+          }
+        });
+        return function cleanup() {
+          abortController.abort();
+        };
+      }, [userId]);
+    console.log(values)
+    */

@@ -61,9 +61,16 @@ const update = async (req, res) => {
     });
   }
 };
-const updateScore = async (req, res) => {
+/*
+const updateScore = async (req, res, id) => {
   try {
-    let user = req.profile;
+    let user = await User.findById(id);
+    if (!user)
+      return res.status("400").json({
+        error: "User not found",
+    });
+    req.profile = user;
+    user = extend(user, req.body)
     user.quiz_scores = [...quiz_scores, req.body];
     await user.save();
     res.json(user);
@@ -73,6 +80,7 @@ const updateScore = async (req, res) => {
     });
   }
 };
+*/
 const remove = async (req, res) => {
   try {
     let user = req.profile;
@@ -86,4 +94,4 @@ const remove = async (req, res) => {
     });
   }
 };
-export default { create, userByID, read, list, remove, update, updateScore };
+export default { create, userByID, read, list, remove, update };

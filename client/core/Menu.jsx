@@ -49,13 +49,17 @@ export default function Menu() {
             <Link to={"/user/" + auth.isAuthenticated().user._id}>
               <Button style={isActive(location, "/user/" + auth.isAuthenticated().user._id)}>My Profile</Button>
             </Link>
-            <Link to={"/user/" + auth.isAuthenticated().user._id + "/flashcard-quiz"}>
-              <Button style={isActive(location, "/user/" + auth.isAuthenticated().user._id +"/flashcard-quiz")}>Start Quiz</Button>
-            </Link>
             <Button color="inherit" onClick={() => {
               auth.clearJWT(() => navigate('/'));
             }}>Sign out</Button>
           </span>)
+        }
+        {
+          auth.isAuthenticated() && (<span>
+            <Link to={"/users/" + auth.isAuthenticated().user._id + "/flashcard-quiz"}>
+              <Button style={isActive(location, "/users/" + auth.isAuthenticated().user._id +"/flashcard-quiz")}>Start Quiz</Button>
+            </Link>
+            </span>)
         }
         <Link to="/ranking">
           <Button style={isActive(location, "/ranking")}>Ranking
